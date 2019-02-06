@@ -1,1 +1,1 @@
-# ICC-Ranking-Predictor(https://iccrankingpredictor.herokuapp.com)
+# [ICC-Ranking-Predictor](https://iccrankingpredictor.herokuapp.com)
