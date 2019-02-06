@@ -1,0 +1,273 @@
+
+*{  
+           margin:      0px;
+           padding:     0px;
+           box-sizing:  border-box;
+ }
+
+body {        
+          width:       100%;
+          background:  white;
+          font-family: 'Montserrat', sans-serif;
+                  
+             
+} 
+
+#wrapper{
+          max-width:   100%;
+          margin:    0;
+          overflow: auto
+}
+
+#content{ 
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+}
+
+#comptable{
+          text-align: center;
+          border-collapse: collapse;
+
+}
+h1{
+          font-size: 25px;
+          text-align: center;
+  }
+
+#comptable td, #comptable th {
+          padding-top: 8px;
+          padding-bottom: 8px;
+}
+#comptable th{
+          border: 0px solid #ddd;
+          padding: 8px;
+}
+#comptable tr{
+          font-weight: 400;
+          border-bottom: 1px solid #e6e9f0
+  
+}
+#comptable tr:nth-of-type(1){
+          background: #e6e9f0;
+}
+#comptable tr:nth-of-type(2n){
+          background: #fafafa;
+}
+
+tr img{
+          margin-right: 15px;
+}
+#imgdiv img{
+          width: 100%;
+          height: 20vh;
+          filter: brightness(67%);
+}
+@-webkit-keyframes fadeIn{
+  0%{opacity: 0}
+  100%{opacity: 1}
+}
+@keyframes fadeIn{
+  0%{opacity: 0}
+  100%{opacity: 1}
+}@-webkit-keyframes fadeOut{
+  0%{opacity: 1}
+  100%{opacity: 0}
+}@keyframes fadeOut{
+  0%{opacity: 1}
+  100%{opacity: 0}
+}
+
+#comptable th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: center;
+                background-color:  #e6e9f0;
+                color:#51626f;
+}
+@media only screen and (max-width: 700px) {
+
+      #content{
+        flex-direction: column;
+      }
+     #tableDiv{
+      width: 100vw;
+      }
+     #comptable{ 
+      width:100vw;
+      }
+     .prediv{
+       width: 100vw;
+      }
+      tr td:nth-of-type(1){
+      padding-left: 7%!important;
+       text-align: left;
+      width: 18%;
+      }
+  }
+ 
+@media only screen and (min-width: 700px) {
+
+     #content{
+      flex-direction: row;
+      }
+
+     #tableDiv{
+      width: 50vw;
+      }
+
+     #comptable{ 
+      width:50vw;
+      }
+
+     tr td:nth-of-type(1){
+      padding-left: 4.8%!important;
+      text-align: left;
+      width: 12%;
+      }
+    
+ }
+    
+ input{ 
+       -webkit-animation: fadeIn 2s;
+       animation: fadeIn 2s
+      }
+
+#comptable tr td:nth-of-type(2){text-align: left;}
+#comptable th:nth-of-type(2){text-align: left;padding-left: 10px;}
+
+  h1{
+          color: white;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 1;
+  }
+
+  #imgdiv{
+          position: relative;
+  }
+  #content{
+          display: flex;
+          align-items:flex-start;
+          justify-content: space-around; }
+
+  #tableDiv{     
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+        }
+  .loader{
+          height: 5vw;
+          width: 5vw;
+          border: 0.7vw solid red;
+          border-radius: 50%;
+          border-left-color:  #3a006b;
+          border-right-color: #fff;
+          border-top-color: #fff;
+          border-bottom-color: #fff;
+          animation: rotate 1s linear infinite;
+         }
+
+@keyframes rotate {
+         0%{transform: rotate(0deg)}
+         100%{transform: rotate(360deg)}
+  }
+
+.prediv{
+         display: flex;
+         flex-direction: column;
+         border:1px solid #dae0e4;
+         margin-bottom: 15px;
+ }
+
+.prediv>div:nth-of-type(1){
+         text-align: center;
+         color: #666;
+         font-weight: 600;
+         border-bottom: 1px solid #dae0e4;;
+}
+.prediv img{
+         width: 2rem;
+         height: 1.5rem;
+}
+.prediv>div:nth-of-type(2){
+         background: #3a006b;
+         color: white;
+         display: flex;
+         flex-direction: row;
+         justify-content:space-between;
+         align-items: center;
+ }
+.prediv>div:nth-of-type(2)>div:nth-of-type(1){
+         background: #3a006b;
+         color: white;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         flex-basis: 40%;
+ }
+.prediv>div:nth-of-type(2)>div:nth-of-type(3){
+         background: #3a006b;
+         color: white;
+         display: flex;
+         flex-direction: row-reverse;
+         align-items: center;
+         flex-basis: 40%;
+ }
+.prediv>div:nth-of-type(2)>div:nth-of-type(odd)>div{
+         font-weight:500;
+         font-size:1rem;
+         padding-left:10px;
+         padding-right:7px; 
+}
+.prediv>div:nth-of-type(2)>div:nth-of-type(2){
+        display: flex;
+        flex-direction: row;
+        margin:7px 1.5rem;
+}
+.prediv>div:nth-of-type(2)>div:nth-of-type(2)>div{
+        display: flex;
+        flex-direction: column;
+
+}
+.prediv i {color: #dae0e4;}
+.prediv>div:nth-of-type(2)>div:nth-of-type(2)>div>div:nth-of-type(2){
+        background:#932cff;
+        padding:10px 15px;
+        border: 0.2px solid white;
+}
+.prediv>div:nth-of-type(2)>div:nth-of-type(2)>div>div:nth-of-type(odd){
+        background:white;
+        padding:1px 15px;
+        cursor: pointer;
+        border: 0.2px solid white;
+}
+.fa-caret-up{font-size:20px;}
+.fa-caret-down{font-size:20px;}
+ .fa-caret-up:blur{transform: translateY(2px) scale(1);}
+.fa-caret-down:blur{transform: translateY(-2px) scale(1);}
+@keyframes hoveroverup{ 
+    100%{transform: translateY(-2px) scale(1.2);color: #932cff;}
+}
+@keyframes hoveroverdown{ 
+    100%{transform: translateY(2px) scale(1.2);color: #932cff;}
+}
+
+.prediv>div:nth-of-type(2)>div:nth-of-type(2)>div>div:nth-of-type(1):hover .fa-caret-up{
+animation: hoveroverup 0.3s forwards;
+}.prediv>div:nth-of-type(2)>div:nth-of-type(2)>div>div:nth-of-type(3):hover .fa-caret-down{
+animation: hoveroverdown 0.3s forwards;
+}
+.prediv>div:nth-of-type(2)>div:nth-of-type(2)>div>div:nth-of-type(1):active .fa-caret-up{
+     animation: hoveroverdown 0.3s  ;
+}.prediv>div:nth-of-type(2)>div:nth-of-type(2)>div>div:nth-of-type(3):active .fa-caret-down{
+     animation: hoveroverup 0.3s  ;
+}
+
+
+ 
+ 
+ 

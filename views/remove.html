@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>remove</title>
+	 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+body{display: flex;justify-content: space-around;background-image: linear-gradient(to right,#feffff ,#a0d8ef  )}
+	form button{padding: 15px;background:#03a9f4;color: white;width: 200px;border: none;margin-bottom: 2px;cursor: pointer;}
+}
+</style>
+<body>
+	
+	<div id="content"></div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.getJSON("/api/data")
+		.then(function(seriesData) {
+			for (var i = 0; i < seriesData.length; i++) {
+			$("#content").append(`<form method="POST" action="/removeSeries/${seriesData[i]._id}"> <button>${seriesData[i].team1Short} vs ${seriesData[i].team2Short}</button> </form>`) }
+		})
+	})
+</script>
+</body>
+</html>
